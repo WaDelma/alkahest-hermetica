@@ -1,5 +1,7 @@
 extern crate nom;
 
+use std::collections::HashMap;
+
 enum Symbol {
     Quintessence,
     Air,
@@ -115,6 +117,23 @@ enum Symbol {
     DayNight, // Measure
     Month, // Mensis. Measure
     HalfDram // Drachma semis. Measure
+}
+
+enum Element {
+    Air,
+    Fire,
+    Earth,
+    Water,
+
+    Aether,
+
+    Sulphur,
+    Mercury,
+    Salt,
+}
+
+struct Cauldron {
+    contents: HashMap<Element, f64>,
 }
 
 // 🝭
